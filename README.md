@@ -18,17 +18,13 @@ $ npm install --save z-exchange-api
 import { ZExchangeAPI } from 'z-exchange-api';
 
 const api = new ZExchangeAPI({ apiKey: 'xxxxx-xxxxx-xxxxx-xxxxx' }); // your api key
-async function logCurrencies() {
-  const { currencies } = await api.getCurrencies();
-  console.log(currencies);
+async function getPair() {
+  const response = await api.getPair();
+  console.log(response);
 }
-logCurrencies();
+getPair();
 ```
 
 ## Resources
 
-* [Documentation API](https://documenter.getpostman.com/view/7907941/S1a32n38)
-
-## Many Thanks for Inspired
-
-[NowPaymentsIO/nowpayments-api-js](https://github.com/NowPaymentsIO/nowpayments-api-js.git)
+- [Documentation API](https://ex.z.com)
