@@ -14,4 +14,8 @@ export class ZExchangeAPI {
   async getPair() {
     return await ZAPIService.getPair(this.apiKey);
   }
+
+  async getDepth(symbol: string, limit?: number) {
+    return await ZAPIService.getDepth({ apiKey: this.apiKey, symbol, limit });
+  }
 }
